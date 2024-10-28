@@ -1,0 +1,594 @@
+/* General container layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Full viewport height section */
+.homeSection {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Top half styling */
+.topHalf {
+  position: relative;
+  height: 78%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bgImage {
+  object-fit: cover; /* Cover the container */
+  z-index: -1; /* Behind other content */
+  width: 100%;
+  height: 100%;
+}
+
+/* Start button styling */
+.startButton {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(15, 189, 38, 0.7);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Bottom half styling */
+.bottomHalf {
+  background-color: white;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ratings section styling */
+.ratings {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ratingCard {
+  margin: 10px;
+  text-align: center;
+}
+
+.ratingImage {
+  border-radius: 80%;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #02571f;
+  margin-bottom: 40px;
+}
+
+.buttonLink {
+  padding: 10px 20px;
+  background-color: #026b27;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buttonLink:hover {
+  background-color: #fafafa;
+}
+/* YourStyles.module.css */
+.callContainer {
+  display: flex; /* Use flex instead of flexbox */
+  position: relative; /* Required for the phone number positioning */
+  align-items: center; /* Vertically align the icon */
+}
+
+.callButton {
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  color: #14d82e; /* Call icon color */
+  font-size: 40px; /* Icon size */
+  cursor: pointer; /* Pointer cursor */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.callButton:hover {
+  color: #0c6820; /* Darker color on hover */
+}
+.btn{
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+}.phoneLink {
+  color: #000000;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.phoneLink:hover {
+  color: #02b948; /* Darker color on hover */
+}.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdownMenu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: space-between; /* Positions text and arrow at ends */
+}
+
+.dropdownMenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.arrow {
+  margin-left: auto; /* Ensures the arrow is right-aligned */
+  color: #333;
+}
+
+
+.phoneNumber {
+ 
+  position: absolute; /* Positioned relative to the container */
+  top: 45px; /* Position it below the button */
+  left: 0; /* Align to the left */
+  background-color: #dddddd; /* Light background */
+  width: 200px;
+  
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Font size for the number */
+  color: #000000; /* Dark text color */
+  box-shadow: 0 2px 5px #d1cfcf33; /* Slight shadow for better visibility */
+}
+
+.callContainer.active .phoneNumber {
+  display: block; /* Show the phone number when the container is active */
+}
+
+
+/* Section styles */
+.questions,
+.homeOwnership,
+.services {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.product,
+.service {
+  margin: 20px 0;
+}
+
+/* Card layout */
+.card {
+  position: relative;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
+
+/* "Find out why we’re better" section */
+.whyBetter {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.whyBetter h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Stories container */
+.storiesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.storyCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* YourStyles.module.css */
+
+.ratings {
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add padding */
+  background-color: #f2f2f2; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.ratingCard {
+  margin: 20px auto; /* Margin for the card */
+  padding: 20px; /* Padding inside the card */
+  background-color: white; /* Card background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  max-width: 600px; /* Max width for the card */
+}
+
+.ratingImage {
+  border-radius: 50%; /* Make images circular */
+  width: 500px; /* Set image width */
+  height: 500px; /* Set image height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.comment {
+  font-style: italic; /* Italic style for comments */
+  color: #555; /* Dark gray color for readability */
+  margin-top: 10px; /* Space above the comment */
+  padding: 10px; /* Padding for comment */
+  border-left: 4px solid #024d2a; /* Decorative left border */
+}
+
+.buttonContainer {
+  display: flex; /* Use flexbox for buttons */
+  justify-content: center; /* Center buttons */
+  margin-top: 10px; /* Margin above the buttons */
+}
+
+.ratingButton {
+  margin: 0 10px; /* Spacing between buttons */
+  padding: 10px 15px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded button corners */
+  background-color: #000000; /* Button background */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.ratingButton:hover {
+  background-color: #120461; /* Darker background on hover */
+}
+
+.ratingButton {
+  background-color: #049724; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Button padding */
+  margin: 5px; /* Space between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+.ratingButton:hover {
+  background-color: #073a14; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.ratingButton:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(61, 6, 189, 0.5); /* Custom focus outline */
+}
+
+.storyText {
+  text-align: left;
+}
+
+.storyText h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.storyText p {
+  margin: 0 0 5px 0;
+}
+
+.rating {
+  display: block;
+  margin-top: 10px;
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* "See all our stories" link */
+.allStoriesLink {
+  margin-top: 20px;
+  display: inline-block;
+  color: #0070f3;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.allStoriesLink:hover {
+  color: #005bb5;
+}
+
+/* Footer styling */
+.footer {
+  padding: 40px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer li {
+  margin: 10px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #0070f3;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #005bb5;
+}
+
+/* Homeownership and services styling */
+.homeOwnership,
+.services {
+  padding: 40px 0;
+}
+
+.homeOwnership h2,
+.services h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Better text styling */
+.betterText {
+  margin-top: 10px; /* Add space above */
+  font-size: 24px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center the text */
+}
+
+.seeAllButton {
+  margin-top: 20px; /* Space above the button */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0070f3; /* Change background color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Homeownership layout */
+.homeOwnership {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0; /* Adjust margin as needed */
+}
+
+.firstHome {
+  flex: 1; /* Take up remaining space */
+  margin-right: 20px; /* Space between sections */
+}
+
+.rightSection {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+}
+
+.card {
+  position: relative;
+  border: 1px solid #ccc; /* Optional border */
+  margin-bottom: 20px; /* Space between cards */
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white; /* Change text color for visibility */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Padding around text */
+}
+
+/* Arrow button styling */
+/* Arrow button styling */
+.arrowButton {
+  display: inline-block;
+  margin-top: 10px; /* Space above the button */
+  text-decoration: none;
+  color: white; /* Change text color to white for better contrast */
+  background-color: #3d06bd; /* Base color */
+  padding: 10px 15px; /* Padding for better size */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.arrowButton:hover {
+  background-color: #120461; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.arrowButton span {
+  margin-left: 5px; /* Space between text and arrow */
+  display: inline-block; /* Ensure the arrow aligns properly */
+}
+
+/* Optional: Adding an arrow icon using Unicode */
+.arrowButton::after {
+  content: '➤'; /* Unicode character for arrow */
+  margin-left: 5px; /* Space between text and arrow */
+}
+
+
+.ratingButton {
+  margin: 5px; /* Space between buttons */
+}
+
+/* Increase the size of the three images and position */
+.imageContainer {
+  display: flex; /* Flex container for images */
+  justify-content: space-between; /* Space between images */
+  padding: 20px; /* Padding around the container */
+}
+
+.imageContainer img {
+  width: 150px; /* Increased width */
+  height: 150px; /* Increased height */
+  object-fit: cover; /* Keep aspect ratio */
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.betterImage {
+  width: 200px; /* Set desired width */
+  height: 200px; /* Set desired height */
+  margin: 10px; /* Space between images */
+  object-fit: cover; /* Ensure images cover their container */
+}
+
+.storiesSection {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center vertically */
+}
+
+.storiesText {
+  flex-grow: 1; /* Allow text to take up space */
+  margin-right: 20px; /* Space between text and images */
+}
+
+.seeAllButton {
+  display: inline-block; /* Display as block for better spacing */
+  padding: 10px 20px; /* Add padding for a better button look */
+  background-color: #348d00; /* Background color */
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.seeAllButton:hover {
+  background-color: #0268137e; /* Darker shade on hover */
+}
+
+.questions {
+  margin-top: 40px; /* Space above the questions section */
+  text-align: center; /* Center text */
+}
+
+.questionsContainer {
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center vertically */
+  gap: 30px; /* Space between questions */
+}
+
+.questionCard {
+  background-color: #f0f0f0; /* Light background */
+  padding: 20px; /* Padding inside the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
+  transition: transform 0.2s; /* Animation on hover */
+}
+
+.questionCard:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items */
+  }
+
+  .imageContainer {
+    flex-direction: column; /* Stack images vertically */
+  }
+
+  .homeOwnership {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .bottomHalf {
+    height: auto; /* Allow height to adjust */
+  }
+}
+
+@media (max-width: 576px) {
+  .startButton {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .betterText {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .questionsContainer {
+    flex-direction: column; /* Stack questions vertically */
+  }
+}

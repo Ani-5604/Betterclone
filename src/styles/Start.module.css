@@ -1,0 +1,105 @@
+.spokesperson-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.call-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.spokesperson-message {
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.options button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.callContainer {
+  display: flex; /* Use flex instead of flexbox */
+  position: relative; /* Required for the phone number positioning */
+  align-items: center; /* Vertically align the icon */
+}
+
+.callButton {
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  color: #14d82e; /* Call icon color */
+  font-size: 40px; /* Icon size */
+  cursor: pointer; /* Pointer cursor */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.callButton:hover {
+  color: #0c6820; /* Darker color on hover */
+}
+.btn{
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+}.phoneLink {
+  color: #000000;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.phoneLink:hover {
+  color: #02b948; /* Darker color on hover */
+}
+
+.phoneNumber {
+ 
+  position: absolute; /* Positioned relative to the container */
+  top: 45px; /* Position it below the button */
+  left: 0; /* Align to the left */
+  background-color: #dddddd; /* Light background */
+  width: 200px;
+  
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Font size for the number */
+  color: #000000; /* Dark text color */
+  box-shadow: 0 2px 5px #d1cfcf33; /* Slight shadow for better visibility */
+}
+
+.callContainer.active .phoneNumber {
+  display: block; /* Show the phone number when the container is active */
+}
+
+.options button:hover {
+  background-color: #45a049;
+}
+
+.statistics {
+  margin: 20px 0;
+}
+
+.unlock {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #96b6a1;
+  margin-bottom: 40px;
+}
+
+.call-to-action {
+  margin-top: 20px;
+}
